@@ -398,3 +398,17 @@ function findPerfectSensitivity() {
         "Try this sensitivity for a few matches and adjust it gradually."
     );
 }
+function optimizeGamingPC() {
+    alert(
+        "GAMING PC OPTIMIZATION GUIDE\n\n" +
+        "✓ Close unnecessary background programs\n" +
+        "✓ Update your GPU drivers\n" +
+        "✓ Use your GPU's performance settings\n" +
+        "✓ Lower demanding graphics settings\n" +
+        "✓ Keep Windows updated\n" +
+        "✓ Make sure your PC has good airflow\n" +
+        "✓ Check that your monitor is set to its highest supported refresh rate\n" +
+        "✓ Avoid running unnecessary overlays while gaming\n\n" +
+        "Apply these changes one at a time and test your FPS after each change."
+    );
+}
