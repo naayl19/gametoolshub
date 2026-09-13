@@ -1,465 +1,909 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free gaming tools for FPS, sensitivity, eDPI, FOV and PC performance.">
+
+    <meta name="description"
+        content="Free gaming tools for FPS, sensitivity, eDPI, FOV and PC performance.">
+
     <title>GameTools Hub - Gaming Tools for Every Gamer</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-<header>
-    <div class="logo">🎮 GameTools<span>Hub</span></div>
+    <!-- ================= HEADER ================= -->
 
-    <nav>
-        <a href="#tools">Tools</a>
-        <a href="#games">Games</a>
-        <a href="#guides">Guides</a>
-        <a href="#shop">Gaming Gear</a>
-    </nav>
-</header>
+    <header>
 
-<section class="hero">
-    <div class="hero-content">
-        <p class="badge">FREE GAMING TOOLS</p>
+        <div class="logo">
+            🎮 GameTools<span>Hub</span>
+        </div>
 
-        <h1>Level Up Your<br><span>Gaming Setup</span></h1>
+        <nav>
+            <a href="#tools">Tools</a>
+            <a href="#games">Games</a>
+            <a href="#guides">Guides</a>
+            <a href="#shop">Gaming Gear</a>
+        </nav>
 
-        <p>
-            FPS calculators, sensitivity converters, eDPI tools,
-            FOV calculators and PC performance tools for gamers.
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="badge">
+                FREE GAMING TOOLS
+            </p>
+
+            <h1>
+                Level Up Your<br>
+                <span>Gaming Setup</span>
+            </h1>
+
+            <p>
+                FPS calculators, sensitivity converters, eDPI tools,
+                FOV calculators and PC performance tools for gamers.
+            </p>
+
+            <a href="#games" class="main-button">
+                Choose Your Game ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GAME SELECTOR ================= -->
+
+    <section id="games" class="section">
+
+        <h2>
+            Choose Your Game
+        </h2>
+
+        <p class="section-subtitle">
+            Select a game to customize your gaming tools.
         </p>
 
-        <a href="#games" class="main-button">Choose Your Game ↓</a>
-    </div>
-</section>
 
-<section id="games" class="section">
+        <div class="game-selector">
 
-    <h2>Choose Your Game</h2>
-    <p class="section-subtitle">
-        Select a game to customize your gaming tools.
-    </p>
-
-    <div class="game-selector">
-
-        <button onclick="selectGame('PUBG Mobile')">PUBG Mobile</button>
-        <button onclick="selectGame('PUBG PC')">PUBG PC</button>
-        <button onclick="selectGame('Free Fire')">Free Fire</button>
-        <button onclick="selectGame('Valorant')">Valorant</button>
-        <button onclick="selectGame('Fortnite')">Fortnite</button>
-        <button onclick="selectGame('Minecraft')">Minecraft</button>
-        <button onclick="selectGame('Call of Duty')">Call of Duty</button>
-        <button onclick="selectGame('Apex Legends')">Apex Legends</button>
-        <button onclick="selectGame('Counter-Strike 2')">CS2</button>
-        <button onclick="selectGame('Roblox')">Roblox</button>
-        <button onclick="selectGame('GTA V')">GTA V</button>
-        <button onclick="selectGame('League of Legends')">League of Legends</button>
-        <button onclick="selectGame('Overwatch 2')">Overwatch 2</button>
-        <button onclick="selectGame('Rainbow Six Siege')">Rainbow Six Siege</button>
-        <button onclick="selectGame('Rocket League')">Rocket League</button>
-        <button onclick="selectGame('Other')">Other Game</button>
-
-    </div>
-
-    <div id="selectedGame" class="selected-game">
-        Selected game: <strong>None</strong>
-    </div>
-
-</section>
-
-
-<section id="tools" class="section tools-section">
-
-    <h2>Gaming Tools</h2>
-
-    <div class="tools-grid">
-
-        <!-- FPS CALCULATOR -->
-
-        <div class="tool-card">
-
-            <div class="tool-icon">🎯</div>
-
-            <h3>FPS Calculator</h3>
-
-            <p>Estimate FPS from your PC hardware.</p>
-
-            <label>CPU</label>
-            <select id="cpu">
-                <option value="1">Basic CPU</option>
-                <option value="1.2">Mid-range CPU</option>
-                <option value="1.5">High-end CPU</option>
-                <option value="1.8">Enthusiast CPU</option>
-            </select>
-
-            <label>GPU</label>
-            <select id="gpu">
-                <option value="1">Basic GPU</option>
-                <option value="1.4">Mid-range GPU</option>
-                <option value="1.8">High-end GPU</option>
-                <option value="2.3">Enthusiast GPU</option>
-            </select>
-
-            <label>Graphics Quality</label>
-            <select id="graphics">
-                <option value="1.5">Low</option>
-                <option value="1">Medium</option>
-                <option value="0.75">High</option>
-                <option value="0.55">Ultra</option>
-            </select>
-
-            <button onclick="calculateFPS()">Calculate FPS</button>
-
-            <div id="fpsResult" class="result"></div>
-
-        </div>
-
-
-        <!-- EDPI CALCULATOR -->
-
-        <div class="tool-card">
-
-            <div class="tool-icon">🖱️</div>
-
-            <h3>eDPI Calculator</h3>
-
-            <p>Calculate your effective mouse sensitivity.</p>
-
-            <label>DPI</label>
-            <input type="number" id="dpi" placeholder="Example: 800">
-
-            <label>In-game Sensitivity</label>
-            <input type="number" id="sensitivity" step="0.01" placeholder="Example: 0.35">
-
-            <button onclick="calculateEDPI()">Calculate eDPI</button>
-
-            <div id="edpiResult" class="result"></div>
-
-        </div>
-
-
-        <!-- SENSITIVITY CONVERTER -->
-
-        <div class="tool-card">
-
-            <div class="tool-icon">🔄</div>
-
-            <h3>Sensitivity Converter</h3>
-
-            <p>Convert sensitivity between games.</p>
-
-            <label>From Game</label>
-
-            <select id="fromGame">
-                <option>Valorant</option>
-                <option>CS2</option>
-                <option>Apex Legends</option>
-                <option>Fortnite</option>
-                <option>Call of Duty</option>
-            </select>
-
-            <label>To Game</label>
-
-            <select id="toGame">
-                <option>Valorant</option>
-                <option>CS2</option>
-                <option>Apex Legends</option>
-                <option>Fortnite</option>
-                <option>Call of Duty</option>
-            </select>
-
-            <label>Your Sensitivity</label>
-            <input type="number" id="convertSens" step="0.01">
-
-            <button onclick="convertSensitivity()">Convert</button>
-
-            <div id="sensResult" class="result"></div>
-
-        </div>
-
-
-        <!-- FOV CALCULATOR -->
-
-        <div class="tool-card">
-
-            <div class="tool-icon">👁️</div>
-
-            <h3>FOV Calculator</h3>
-
-            <p>Calculate horizontal FOV from vertical FOV.</p>
-
-            <label>Vertical FOV</label>
-
-            <input
-                type="number"
-                id="verticalFOV"
-                placeholder="Example: 90"
-            >
-
-            <label>Aspect Ratio</label>
-
-            <select id="aspectRatio">
-
-                <option value="1.7778">16:9</option>
-                <option value="1.6">16:10</option>
-                <option value="1.3333">4:3</option>
-                <option value="2.3333">21:9</option>
-
-            </select>
-
-            <button onclick="calculateFOV()">Calculate FOV</button>
-
-            <div id="fovResult" class="result"></div>
-
-        </div>
-
-
-        <!-- PC ESTIMATOR -->
-
-        <div class="tool-card">
-
-            <div class="tool-icon">🖥️</div>
-
-            <h3>PC Performance Estimator</h3>
-
-            <p>Get a rough performance estimate.</p>
-
-            <label>RAM</label>
-
-            <select id="ram">
-                <option value="0.8">4 GB</option>
-                <option value="1">8 GB</option>
-                <option value="1.1">16 GB</option>
-                <option value="1.2">32 GB</option>
-            </select>
-
-            <label>Resolution</label>
-
-            <select id="resolution">
-                <option value="1.5">720p</option>
-                <option value="1">1080p</option>
-                <option value="0.7">1440p</option>
-                <option value="0.45">4K</option>
-            </select>
-
-            <button onclick="estimatePerformance()">
-                Estimate Performance
+            <button onclick="selectGame('PUBG Mobile')">
+                PUBG Mobile
             </button>
 
-            <div id="performanceResult" class="result"></div>
-
-        </div>
-
-
-        <!-- FPS BOOST -->
-
-        <div class="tool-card">
-
-            <div class="tool-icon">⚡</div>
-
-            <h3>FPS Boost Guide</h3>
-
-            <p>Improve gaming performance with simple changes.</p>
-
-            <button onclick="showFPSGuide()">
-                Show Optimization Tips
+            <button onclick="selectGame('PUBG PC')">
+                PUBG PC
             </button>
 
-            <div id="fpsGuide" class="guide-result"></div>
+            <button onclick="selectGame('Free Fire')">
+                Free Fire
+            </button>
 
-        </div>
+            <button onclick="selectGame('Valorant')">
+                Valorant
+            </button>
 
-    </div>
+            <button onclick="selectGame('Fortnite')">
+                Fortnite
+            </button>
 
-</section>
+            <button onclick="selectGame('Minecraft')">
+                Minecraft
+            </button>
 
+            <button onclick="selectGame('Call of Duty')">
+                Call of Duty
+            </button>
 
-<section id="guides" class="section">
+            <button onclick="selectGame('Apex Legends')">
+                Apex Legends
+            </button>
 
-    <h2>Gaming Guides</h2>
+            <button onclick="selectGame('Counter-Strike 2')">
+                CS2
+            </button>
 
-    <div class="guides-grid">
+            <button onclick="selectGame('Roblox')">
+                Roblox
+            </button>
 
-        <article>
-            <span>⚡</span>
-            <h3>How to Increase FPS</h3>
-            <p>
-                Learn how graphics settings, resolution,
-                drivers and background applications affect FPS.
-            </p>
-            <button onclick="readGuide('fps')">Read Guide</button>
-        </article>
+            <button onclick="selectGame('GTA V')">
+                GTA V
+            </button>
 
-        <article>
-            <span>🎯</span>
-            <h3>Find Your Perfect Sensitivity</h3>
-            <p>
-                Learn how DPI and in-game sensitivity work together.
-            </p>
-            <button onclick="readGuide('sens')">Read Guide</button>
-        </article>
+            <button onclick="selectGame('League of Legends')">
+                League of Legends
+            </button>
 
-        <article>
-            <span>🖥️</span>
-            <h3>Gaming PC Optimization</h3>
-            <p>
-                General Windows and game settings that can
-                help improve performance.
-            </p>
-            <button onclick="readGuide('pc')">Read Guide</button>
-        </article>
+            <button onclick="selectGame('Overwatch 2')">
+                Overwatch 2
+            </button>
 
-    </div>
+            <button onclick="selectGame('Rainbow Six Siege')">
+                Rainbow Six Siege
+            </button>
 
-    <div id="guideContent" class="guide-content"></div>
+            <button onclick="selectGame('Rocket League')">
+                Rocket League
+            </button>
 
-</section>
-
-
-<!-- AFFILIATE / GAMING GEAR -->
-
-<section id="shop" class="section">
-
-    <h2>Recommended Gaming Gear</h2>
-
-    <p class="section-subtitle">
-        Useful products for gamers.
-    </p>
-
-    <div class="shop-grid">
-
-        <div class="product-card">
-
-            <div class="product-image">🖱️</div>
-
-            <h3>Gaming Mouse</h3>
-
-            <p>
-                Lightweight mouse suitable for competitive gaming.
-            </p>
-
-            <!-- Replace this link with your affiliate link -->
-            <a href="#" class="product-button">
-                View Product
-            </a>
+            <button onclick="selectGame('Other')">
+                Other Game
+            </button>
 
         </div>
 
 
-        <div class="product-card">
+        <div id="selectedGame" class="selected-game">
 
-            <div class="product-image">⌨️</div>
+            Selected game:
+            <strong>None</strong>
 
-            <h3>Mechanical Keyboard</h3>
+        </div>
 
-            <p>
-                Fast and responsive keyboard for gaming.
-            </p>
+    </section>
 
-            <a href="#" class="product-button">
-                View Product
-            </a>
+
+    <!-- ================= GAMING TOOLS ================= -->
+
+    <section id="tools" class="section tools-section">
+
+        <h2>
+            Gaming Tools
+        </h2>
+
+
+        <div class="tools-grid">
+
+
+            <!-- FPS CALCULATOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    🎯
+                </div>
+
+                <h3>
+                    FPS Calculator
+                </h3>
+
+                <p>
+                    Estimate FPS from your PC hardware.
+                </p>
+
+
+                <label>
+                    CPU
+                </label>
+
+                <select id="cpu">
+
+                    <option value="1">
+                        Basic CPU
+                    </option>
+
+                    <option value="1.2">
+                        Mid-range CPU
+                    </option>
+
+                    <option value="1.5">
+                        High-end CPU
+                    </option>
+
+                    <option value="1.8">
+                        Enthusiast CPU
+                    </option>
+
+                </select>
+
+
+                <label>
+                    GPU
+                </label>
+
+                <select id="gpu">
+
+                    <option value="1">
+                        Basic GPU
+                    </option>
+
+                    <option value="1.4">
+                        Mid-range GPU
+                    </option>
+
+                    <option value="1.8">
+                        High-end GPU
+                    </option>
+
+                    <option value="2.3">
+                        Enthusiast GPU
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Graphics Quality
+                </label>
+
+                <select id="graphics">
+
+                    <option value="1.5">
+                        Low
+                    </option>
+
+                    <option value="1">
+                        Medium
+                    </option>
+
+                    <option value="0.75">
+                        High
+                    </option>
+
+                    <option value="0.55">
+                        Ultra
+                    </option>
+
+                </select>
+
+
+                <button onclick="calculateFPS()">
+                    Calculate FPS
+                </button>
+
+
+                <div id="fpsResult" class="result"></div>
+
+            </div>
+
+
+
+            <!-- EDPI CALCULATOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    🖱️
+                </div>
+
+                <h3>
+                    eDPI Calculator
+                </h3>
+
+                <p>
+                    Calculate your effective mouse sensitivity.
+                </p>
+
+
+                <label>
+                    DPI
+                </label>
+
+                <input
+                    type="number"
+                    id="dpi"
+                    placeholder="Example: 800"
+                >
+
+
+                <label>
+                    In-game Sensitivity
+                </label>
+
+                <input
+                    type="number"
+                    id="sensitivity"
+                    step="0.01"
+                    placeholder="Example: 0.35"
+                >
+
+
+                <button onclick="calculateEDPI()">
+                    Calculate eDPI
+                </button>
+
+
+                <div id="edpiResult" class="result"></div>
+
+            </div>
+
+
+
+            <!-- SENSITIVITY CONVERTER -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    🔄
+                </div>
+
+                <h3>
+                    Sensitivity Converter
+                </h3>
+
+                <p>
+                    Convert sensitivity between games.
+                </p>
+
+
+                <label>
+                    From Game
+                </label>
+
+                <select id="fromGame">
+
+                    <option>
+                        Valorant
+                    </option>
+
+                    <option>
+                        CS2
+                    </option>
+
+                    <option>
+                        Apex Legends
+                    </option>
+
+                    <option>
+                        Fortnite
+                    </option>
+
+                    <option>
+                        Call of Duty
+                    </option>
+
+                </select>
+
+
+                <label>
+                    To Game
+                </label>
+
+                <select id="toGame">
+
+                    <option>
+                        Valorant
+                    </option>
+
+                    <option>
+                        CS2
+                    </option>
+
+                    <option>
+                        Apex Legends
+                    </option>
+
+                    <option>
+                        Fortnite
+                    </option>
+
+                    <option>
+                        Call of Duty
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Your Sensitivity
+                </label>
+
+                <input
+                    type="number"
+                    id="convertSens"
+                    step="0.01"
+                >
+
+
+                <button onclick="convertSensitivity()">
+                    Convert
+                </button>
+
+
+                <div id="sensResult" class="result"></div>
+
+            </div>
+
+
+
+            <!-- FOV CALCULATOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    👁️
+                </div>
+
+                <h3>
+                    FOV Calculator
+                </h3>
+
+                <p>
+                    Calculate horizontal FOV from vertical FOV.
+                </p>
+
+
+                <label>
+                    Vertical FOV
+                </label>
+
+                <input
+                    type="number"
+                    id="verticalFOV"
+                    placeholder="Example: 90"
+                >
+
+
+                <label>
+                    Aspect Ratio
+                </label>
+
+                <select id="aspectRatio">
+
+                    <option value="1.7778">
+                        16:9
+                    </option>
+
+                    <option value="1.6">
+                        16:10
+                    </option>
+
+                    <option value="1.3333">
+                        4:3
+                    </option>
+
+                    <option value="2.3333">
+                        21:9
+                    </option>
+
+                </select>
+
+
+                <button onclick="calculateFOV()">
+                    Calculate FOV
+                </button>
+
+
+                <div id="fovResult" class="result"></div>
+
+            </div>
+
+
+
+            <!-- PC PERFORMANCE ESTIMATOR -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    🖥️
+                </div>
+
+                <h3>
+                    PC Performance Estimator
+                </h3>
+
+                <p>
+                    Get a rough performance estimate.
+                </p>
+
+
+                <label>
+                    RAM
+                </label>
+
+                <select id="ram">
+
+                    <option value="0.8">
+                        4 GB
+                    </option>
+
+                    <option value="1">
+                        8 GB
+                    </option>
+
+                    <option value="1.1">
+                        16 GB
+                    </option>
+
+                    <option value="1.2">
+                        32 GB
+                    </option>
+
+                </select>
+
+
+                <label>
+                    Resolution
+                </label>
+
+                <select id="resolution">
+
+                    <option value="1.5">
+                        720p
+                    </option>
+
+                    <option value="1">
+                        1080p
+                    </option>
+
+                    <option value="0.7">
+                        1440p
+                    </option>
+
+                    <option value="0.45">
+                        4K
+                    </option>
+
+                </select>
+
+
+                <button onclick="estimatePerformance()">
+                    Estimate Performance
+                </button>
+
+
+                <div id="performanceResult" class="result"></div>
+
+            </div>
+
+
+
+            <!-- FPS BOOST GUIDE -->
+
+            <div class="tool-card">
+
+                <div class="tool-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    FPS Boost Guide
+                </h3>
+
+                <p>
+                    Improve gaming performance with simple changes.
+                </p>
+
+
+                <button onclick="showFPSGuide()">
+                    Show Optimization Tips
+                </button>
+
+
+                <div
+                    id="fpsGuide"
+                    class="guide-result">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= GAMING GUIDES ================= -->
+
+    <section id="guides" class="section">
+
+        <h2>
+            Gaming Guides
+        </h2>
+
+
+        <div class="guides-grid">
+
+
+            <!-- FPS GUIDE -->
+
+            <article>
+
+                <span>
+                    ⚡
+                </span>
+
+                <h3>
+                    How to Increase FPS
+                </h3>
+
+                <p>
+                    Learn how graphics settings, resolution,
+                    drivers and background applications affect FPS.
+                </p>
+
+                <button onclick="readGuide('fps')">
+                    Read Guide
+                </button>
+
+            </article>
+
+
+
+            <!-- SENSITIVITY GUIDE -->
+
+            <article>
+
+                <span>
+                    🎯
+                </span>
+
+                <h3>
+                    Find Your Perfect Sensitivity
+                </h3>
+
+                <p>
+                    Learn how DPI and in-game sensitivity work together.
+                </p>
+
+                <button onclick="readGuide('sens')">
+                    Read Guide
+                </button>
+
+            </article>
+
+
+
+            <!-- PC OPTIMIZATION GUIDE -->
+
+            <article>
+
+                <span>
+                    🖥️
+                </span>
+
+                <h3>
+                    Gaming PC Optimization
+                </h3>
+
+                <p>
+                    General Windows and game settings that can
+                    help improve performance.
+                </p>
+
+                <button onclick="readGuide('pc')">
+                    Read Guide
+                </button>
+
+            </article>
 
         </div>
 
 
-        <div class="product-card">
+        <!-- GUIDE CONTENT -->
 
-            <div class="product-image">🎧</div>
-
-            <h3>Gaming Headset</h3>
-
-            <p>
-                Improve your audio experience while gaming.
-            </p>
-
-            <a href="#" class="product-button">
-                View Product
-            </a>
-
+        <div
+            id="guideContent"
+            class="guide-content">
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 
-<!-- AD PLACEHOLDER -->
+    <!-- ================= GAMING GEAR ================= -->
 
-<section class="ad-section">
+    <section id="shop" class="section">
 
-    <div class="ad-box">
+        <h2>
+            Recommended Gaming Gear
+        </h2>
 
-        <span>ADVERTISEMENT</span>
-
-        <p>
-            Your advertisement can appear here.
+        <p class="section-subtitle">
+            Useful products for gamers.
         </p>
 
-    </div>
 
-</section>
+        <div class="shop-grid">
 
 
-<!-- PREMIUM -->
+            <!-- GAMING MOUSE -->
 
-<section class="premium">
+            <div class="product-card">
 
-    <div>
+                <div class="product-image">
+                    🖱️
+                </div>
 
-        <p class="badge">COMING SOON</p>
+                <h3>
+                    Gaming Mouse
+                </h3>
 
-        <h2>GameTools Premium</h2>
+                <p>
+                    Lightweight mouse suitable for competitive gaming.
+                </p>
 
-        <p>
-            Unlock advanced gaming calculators,
-            detailed optimization recommendations
-            and additional tools.
+
+                <a
+                    href="https://www.google.com/search?q=gaming+mouse"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-button">
+
+                    View Products →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- MECHANICAL KEYBOARD -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    ⌨️
+                </div>
+
+                <h3>
+                    Mechanical Keyboard
+                </h3>
+
+                <p>
+                    Fast and responsive keyboard for gaming.
+                </p>
+
+
+                <a
+                    href="https://www.google.com/search?q=gaming+mechanical+keyboard"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-button">
+
+                    View Products →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- GAMING HEADSET -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    🎧
+                </div>
+
+                <h3>
+                    Gaming Headset
+                </h3>
+
+                <p>
+                    Improve your audio experience while gaming.
+                </p>
+
+
+                <a
+                    href="https://www.google.com/search?q=gaming+headset"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="product-button">
+
+                    View Products →
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AFFILIATE DISCLOSURE -->
+
+        <p class="affiliate-disclosure">
+
+            Disclosure: Some links on GameToolsHub may be
+            affiliate links. If you purchase through an
+            affiliate link, we may earn a commission.
+
         </p>
 
-    </div>
-
-    <button onclick="premiumMessage()">
-        Learn More
-    </button>
-
-</section>
+    </section>
 
 
-<footer>
+    <!-- ================= ADVERTISEMENT ================= -->
 
-    <div class="logo">
-        🎮 GameTools<span>Hub</span>
-    </div>
+    <section class="ad-section">
 
-    <p>
-        Free gaming tools for gamers everywhere.
-    </p>
+        <div class="ad-box">
 
-    <div class="footer-links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms</a>
-        <a href="#">Contact</a>
-    </div>
+            <span>
+                ADVERTISEMENT
+            </span>
 
-    <p class="copyright">
-        © 2026 GameTools Hub
-    </p>
+            <p>
+                Your advertisement can appear here.
+            </p>
 
-</footer>
+        </div>
+
+    </section>
 
 
-<script src="script.js"></script>
+    <!-- ================= PREMIUM ================= -->
+
+    <section class="premium">
+
+        <div>
+
+            <p class="badge">
+                COMING SOON
+            </p>
+
+            <h2>
+                GameTools Premium
+            </h2>
+
+            <p>
+                Unlock advanced gaming calculators,
+                detailed optimization recommendations
+                and additional tools.
+            </p>
+
+        </div>
+
+
+        <button onclick="premiumMessage()">
+            Learn More
+        </button>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="logo">
+            🎮 GameTools<span>Hub</span>
+        </div>
+
+        <p>
+            Free gaming tools for gamers everywhere.
+        </p>
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+            © 2026 GameTools Hub
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
 
 </body>
-</html><button onclick="showFPSGuide()">How to Increase FPS</button>
-<button onclick="findPerfectSensitivity()">Find Your Perfect Sensitivity</button>
-<button onclick="optimizeGamingPC()">Gaming PC Optimization</button>
 
-
-
-
-.
+</html>
