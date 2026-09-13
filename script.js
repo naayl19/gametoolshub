@@ -373,3 +373,28 @@ function showFPSGuide() {
         "6. Lower resolution if your GPU is struggling."
     );
 }
+function findPerfectSensitivity() {
+    const dpi = prompt("Enter your mouse DPI (e.g. 800):");
+    
+    if (!dpi || isNaN(dpi) || dpi <= 0) {
+        alert("Please enter a valid DPI.");
+        return;
+    }
+
+    const sensitivity = prompt("Enter your current in-game sensitivity:");
+
+    if (!sensitivity || isNaN(sensitivity) || sensitivity <= 0) {
+        alert("Please enter a valid sensitivity.");
+        return;
+    }
+
+    const edpi = Number(dpi) * Number(sensitivity);
+
+    alert(
+        "YOUR SENSITIVITY RESULTS\n\n" +
+        "DPI: " + dpi + "\n" +
+        "In-game Sensitivity: " + sensitivity + "\n" +
+        "eDPI: " + edpi.toFixed(0) + "\n\n" +
+        "Try this sensitivity for a few matches and adjust it gradually."
+    );
+}
