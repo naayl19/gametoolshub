@@ -362,3 +362,14 @@ function premiumMessage() {
         "Premium features can be connected later using a payment service."
     );
 }
+function showFPSGuide() {
+    alert(
+        "HOW TO INCREASE FPS\n\n" +
+        "1. Lower your game's graphics settings.\n" +
+        "2. Close unnecessary background programs.\n" +
+        "3. Update your graphics driver.\n" +
+        "4. Use fullscreen mode when available.\n" +
+        "5. Make sure your PC is not overheating.\n" +
+        "6. Lower resolution if your GPU is struggling."
+    );
+}
